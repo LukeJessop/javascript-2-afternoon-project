@@ -18,9 +18,10 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
-
-
+function first(arr){
+  return arr[0]
+}
+first(arr)
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -33,7 +34,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+function last(arr){
+  return arr[2]
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +51,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper(family){
+  for (i = 0; i < family.length; i++) {
+    alert(family[i]);
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +70,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+function reversedLooper(letters){
+  for (let i = letters.length -1; i >= 0; i--) {
+    alert(letters[i]);
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,8 +89,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
-
+function evenFinder(nums){
+  var arr= []
+  for (i = 0; i < nums.length; i++){
+    if (nums[i] % 2 === 0){
+      arr.push(nums[i])
+    }
+  }
+  return arr
+}
 
 
 
@@ -107,8 +125,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
-
+function divider(numbersArray){
+  arr = []
+  arrTwo = []
+  for (i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      arr.push(numbersArray[i])
+    }else{
+      arrTwo.push(numbersArray[i])
+    }
+  }
+  return [arr, arrTwo]
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -130,7 +158,15 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
-
+function finder(a){
+  let randomNumber = getRandomArbitrary()
+  for(let i = 0; i < a.length; i++){
+    if (a[i] === randomNumber){ 
+      return true
+    }
+  }
+  return false
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -158,6 +194,30 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item){
+  // console.log("list", myGroceryList)
+      if (myGroceryList === null){
+      console.log("truthy")
+      }
+        
+  for(let i = 0; i < myGroceryList.length; i++){
+    // console.log('yes'+ i)
+    console.log(myGroceryList)
+      if (item === myGroceryList[i]){
+        myGroceryList.splice(myGroceryList[i], 1)
+        console.log("spliced")
+      }
+
+      
+    }
+  return myGroceryList
+}
+
+function addItem(list, item){
+  list.push(item)
+return list
+}
+
 
 
 
