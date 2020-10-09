@@ -194,30 +194,46 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-function removeItem(myGroceryList, item){
-  // console.log("list", myGroceryList)
-      if (myGroceryList === null){
-      console.log("truthy")
-      }
-        
-  for(let i = 0; i < myGroceryList.length; i++){
-    // console.log('yes'+ i)
-    console.log(myGroceryList)
-      if (item === myGroceryList[i]){
-        myGroceryList.splice(myGroceryList[i], 1)
-        console.log("spliced")
-      }
 
+function removeItem(groceryList, item){ 
+  // console.log(typeof groceryList)
+  // console.log("list", myGroceryList,"item", item)
+  for( let i = 0; i < groceryList; i++){
+    if (groceryList != undefined){
+      // console.log("first if")
+      // console.log(groceryList[i])
+      // groceryList.splice(groceryList[i], 1)
       
     }
+    if (item !== groceryList[i]){
+      
+    }
+  }
+  var arr = []
+
+    if (item == undefined){
+      return arr
+    }
+    
   return myGroceryList
 }
 
-function addItem(list, item){
-  list.push(item)
-return list
-}
 
+
+function addItem(groceryList, item){
+  // console.log("list", groceryList)
+  if (groceryList != undefined){
+    // console.log("first if")
+    groceryList.push(item)
+    
+  }
+  var arr = []
+    if (item == undefined){
+      // console.log('second if')
+      return arr/* however the fukc you make an empty array*/
+    }
+  return groceryList
+}
 
 
 
@@ -229,7 +245,13 @@ return list
 
 //Code Here
 
-
+function maker(){
+  var arr = []
+  for (let i = 1; i < 216; i++){
+    arr.push(i)
+  }
+  return arr
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -244,8 +266,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
-
+function addTen(nums){
+  var arr = []
+  // console.log(nums)
+  for(let i = 0; i<nums.length; i++){
+    console.log(i)
+    nums.slice(nums[i])
+  }
+  console.log(arr)
+  return nums
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -269,7 +299,14 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2){
+  console.log(arr1, arr2)
+  if(arr1.length > arr2.length){
+    return arr1
+  }else {
+    return arr2
+  }
+}
 
 
 /*
@@ -281,7 +318,12 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2){
+  if(arr1.length == arr2.length){
+    arr1.push(arr2)
+    return arr1, arr2
+  }
+}
 
 
 ////////// PROBLEM 12 //////////
