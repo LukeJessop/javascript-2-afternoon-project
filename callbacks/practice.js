@@ -168,13 +168,13 @@ each(names, function(item, indice){
 */
 
 // Code here
-function getUserById(users, id, user){
+function getUserById(array, id, user){
   for(let i = 0; i < users.length; i++){
     if (users.id === id){
       
     }
   }
-  user(users)
+  user(array)
 }
 
 

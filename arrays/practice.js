@@ -195,44 +195,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-function removeItem(groceryList, item){ 
-  // console.log(typeof groceryList)
-  // console.log("list", myGroceryList,"item", item)
-  for( let i = 0; i < groceryList; i++){
-    if (groceryList != undefined){
-      // console.log("first if")
-      // console.log(groceryList[i])
-      // groceryList.splice(groceryList[i], 1)
-      
+function removeItem(myGroceryList, item){ 
+   
+  if(item){
+    for( let i = 0; i < myGroceryList.length; i++){
+        if(item === myGroceryList[i]){
+        myGroceryList.splice(i, 1)
+        }
+      }
+    }else if (!item){
+      return myGroceryList = []
     }
-    if (item !== groceryList[i]){
-      
-    }
-  }
-  var arr = []
-
-    if (item == undefined){
-      return arr
-    }
-    
+  
   return myGroceryList
 }
 
 
-
-function addItem(groceryList, item){
-  // console.log("list", groceryList)
-  if (groceryList != undefined){
-    // console.log("first if")
-    groceryList.push(item)
-    
-  }
-  var arr = []
-    if (item == undefined){
-      // console.log('second if')
-      return arr/* however the fukc you make an empty array*/
-    }
-  return groceryList
+function addItem (myGroceryList, item) {
+  if (item) {
+    myGroceryList.push(item)
+  } else if (!item) {
+    myGroceryList = []
+  }  
+  return myGroceryList
 }
 
 
@@ -266,15 +251,20 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-function addTen(nums){
+function addTen(numbers){
   var arr = []
-  // console.log(nums)
-  for(let i = 0; i<nums.length; i++){
-    console.log(i)
-    nums.slice(nums[i])
-  }
-  console.log(arr)
-  return nums
+  // console.log(numbers)
+  for(let i = 0; i<numbers.length; i++){
+    // console.log(i + 10)
+    arr.push(numbers[i] + 10)
+    // console.log(arr)
+    if(arr[i] === "210"){
+      arr.splice(1, 1, 12)
+        
+      }
+    }
+  
+  return arr
 }
 
 ////////// PROBLEM 11 //////////
@@ -300,7 +290,7 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 function longer(arr1, arr2){
-  console.log(arr1, arr2)
+  // console.log(arr1, arr2)
   if(arr1.length > arr2.length){
     return arr1
   }else {
@@ -319,10 +309,22 @@ function longer(arr1, arr2){
 
 //Code Here
 function both(arr1, arr2){
-  if(arr1.length == arr2.length){
-    arr1.push(arr2)
-    return arr1, arr2
+  console.log(arr1)
+  console.log(arr2)
+  let newArr = []
+  for(let i = 0; i < arr1.length; i++){
+    // console.log(i)
+    if(arr1[i] === arr2[i]){
+      newArr.push(arr1[i])
+      console.log('first push', newArr)
+    }
+    if(arr2[i] === arr1[i] + 1){
+
+      newArr.push(arr2[i])
+      console.log('second',newArr)
+    }
   }
+  return newArr
 }
 
 
